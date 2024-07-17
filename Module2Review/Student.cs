@@ -2,9 +2,9 @@ namespace Module2Review;
 
 public class Student
 {
-    public string Name { get; set; }
-    public int ID { get; set; }
-    public List<double> Grades { get; set; } = new List<double>() {3.2, 3.9, 2.3, 2.9, 1.67};
+    public string? Name { get; set; }
+    public int? Id { get; set; }
+    public List<double> Grades { get; set; } = new List<double>();
 
     public void AddGrade(double grade)
     {
