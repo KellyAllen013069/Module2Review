@@ -1,4 +1,6 @@
-﻿namespace Module2Review;
+﻿using System.Runtime.Loader;
+
+namespace Module2Review;
 
 class Program
 {
@@ -42,6 +44,26 @@ class Program
                 Console.Write($"{grade} ");
             }
             Console.WriteLine($"\nAverage Grade: {s.CalculateAverageGrade():F2}\n");
+        }
+        
+        //Courses
+        var course1 = new Course();
+        
+        course1.CourseName = "c#";
+        course1.CourseCode = "CS87654";
+        
+        //Enroll students
+        course1.EnrollStudent(student1);
+        course1.EnrollStudent(student2);
+        
+        //display course info and students enrolled
+        
+        Console.WriteLine("---------Course-------------");
+        Console.WriteLine($"Course {course1.CourseCode} is {course1.CourseName}");
+        Console.WriteLine("Students enrolled:");
+        foreach (var student in course1.EnrolledStudents)
+        {
+            Console.WriteLine(student.Name);
         }
     }
 }
